@@ -9,11 +9,6 @@ public class Main {
      The class name must match the file name (before the .java).
      */
 
-    /**
-     * isOdd: A method to print whether a number is odd
-     * @param number
-     */
-
     public static void main(String[] args) {
         /*
          Every Java application must have a method named main.
@@ -99,6 +94,10 @@ public class Main {
 
     }
 
+    /**
+     * isOdd: A method to print whether a number is odd
+     * @param number
+     */
     public static void isOdd(int number) {
         // This method does not return a value.
         // We can use + to concatenate (join together) two "strings".
