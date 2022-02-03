@@ -13,12 +13,6 @@ public class Main {
      * isOdd: A method to print whether a number is odd
      * @param number
      */
-    public static void isOdd(int number) {
-        // This method does not return a value.
-        // We can use + to concatenate (join together) two "strings".
-        System.out.print("The number " + number + " is odd: ");
-        System.out.println((number % 2) == 1);
-    }
 
     public static void main(String[] args) {
         /*
@@ -56,6 +50,10 @@ public class Main {
         double hourlyWage; // Declare variables in Java!
         hourlyWage = 14.25; // Assign a value to a variable.
         System.out.println(hoursWorked * hourlyWage);
+        if (hoursWorked < 0){
+            throw new IllegalArgumentException();
+        }
+
         boolean integerEntered;
         integerEntered = false;
         System.out.println(!integerEntered);
@@ -70,12 +68,43 @@ public class Main {
         isOdd(8);
         System.out.println(isOdd2(7));
 
-        String name = "Laura";
-        System.out.println(name);
+        String name = "Laura"; // "Short" inline initialization
+        String name2 = new String("Laura"); // "Long" inline initialization
+
+        System.out.println(name2);
         char initial = 'L';
+        char initial2 = 'G';
         System.out.println(initial);
+        System.out.println(initial2);
+        System.out.println(initial + initial2);
+
+        String stringI = "5";
+        int i = Integer.parseInt(stringI);
+        System.out.println(i * 3);
+
+        int j = Integer.parseInt("5");
+        System.out.println(j * 3);
+
+        System.out.println(Integer.parseInt("5") * 3);
+
+        System.out.println(Math.sqrt(2));
+        System.out.println(Math.E);
+        System.out.println(Math.PI);
+        System.out.println(Math.pow(2, 3));
+        System.out.println(Math.sin(Math.PI/2)); // Argument to sine is in radians.
+        System.out.println(Math.sin(90)); // Here the argument is 90 radians!
+
+        System.out.println(j);
+        System.out.println((double) j);
+
     }
 
+    public static void isOdd(int number) {
+        // This method does not return a value.
+        // We can use + to concatenate (join together) two "strings".
+        System.out.print("The number " + number + " is odd: ");
+        System.out.println((number % 2) == 1);
+    }
 
     /**
      * isOdd2: A method to return whether a number is odd
