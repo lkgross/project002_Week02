@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.Random;
 
+// The wildcard * means "everything"!
 import static java.lang.Math.*;
 
 public class Main {
@@ -47,7 +48,7 @@ public class Main {
         /* Java is a strongly typed language.
          * Variables must be declared.
          */
-        double hoursWorked = -1; // Inline initialization.
+        double hoursWorked = 40; // Inline initialization.
         double hourlyWage; // Declare variables in Java!
         hourlyWage = 14.25; // Assign a value to a variable.
         System.out.println(hoursWorked * hourlyWage);
@@ -105,7 +106,7 @@ public class Main {
          */
         System.out.println(Math.sqrt(2));
         System.out.println(Math.E);
-        System.out.println(Math.round(Math.E * 100)/100.);
+        System.out.println(Math.round(Math.E * 100) / 100.);
         System.out.println(PI);
         System.out.println(Math.pow(2, 3));
         System.out.println(sin(PI / 2)); // Argument to sine is in radians.
@@ -119,14 +120,14 @@ public class Main {
            import static java.lang.Math.PI;
            import static java.lang.Math.sin;
            */
-        // System.out.println(sin(PI / 2));
+        System.out.println(sin(PI / 2));
 
         /* I can use the variables and methods in the
            Math library without using "Math." in front of each one
            if I
            import static java.lang.Math.*;
            */
-        // System.out.println(pow(2, 3));
+        System.out.println(pow(2, 3));
 
         System.out.println(kmToMiles(5));
 
@@ -157,6 +158,7 @@ public class Main {
 
     /**
      * kmToMiles - A method to convert kilometers km to miles
+     *
      * @param km - distance in kilometers
      * @return - distance in miles
      */
