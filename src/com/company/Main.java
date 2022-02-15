@@ -2,10 +2,6 @@ package com.company;
 
 import java.util.Random;
 
-import static java.lang.Math.PI;
-import static java.lang.Math.sin;
-
-// The wildcard * means everything!
 import static java.lang.Math.*;
 
 public class Main {
@@ -17,17 +13,7 @@ public class Main {
      The class name must match the file name (before the .java).
      */
 
-    /* A (static) class variable is accessible from every method in the class,
-       e.g., main, isOdd, isOdd2, kmToMiles.
-     */
-    // static double mi_in_one_km = 0.621371;
-
-    /* For a (static) class constant (!) that doesn't change, use final.
-       If the programmer tries to change the value, the final alerts
-       to compiler to an error.
-       A constant is typically named in all caps.
-     */
-    static final double MI_IN_ONE_KM = 0.621371;
+    public static final double MI_IN_ONE_KM = 0.621371;
 
     public static void main(String[] args) {
         /*
@@ -61,7 +47,7 @@ public class Main {
         /* Java is a strongly typed language.
          * Variables must be declared.
          */
-        double hoursWorked = 40; // Inline initialization.
+        double hoursWorked = -1; // Inline initialization.
         double hourlyWage; // Declare variables in Java!
         hourlyWage = 14.25; // Assign a value to a variable.
         System.out.println(hoursWorked * hourlyWage);
@@ -85,16 +71,8 @@ public class Main {
 
         String name = "Laura"; // "Short" inline initialization
         String name2 = new String("Laura"); // "Long" inline initialization
-        Random rand = new Random(); // Inline initialization of a Random object
-
-
-        /* The statement
-         rand.nextInt(10);
-         means call the nextInt method on the object rand (?!!)
-         passing in 10 as a parameter to the nextInt method.
-         Note nextInt is a method that is not static. (It's not in italics.)
-         */
-    System.out.println(rand.nextInt(10)); // Generate one of 10 random integers (0-9).
+        Random rand = new Random();
+        System.out.println(rand.nextInt(10)); // Generate one of ten random numbers: 0-9.
 
         System.out.println(name2);
         char initial = 'L';
@@ -127,10 +105,11 @@ public class Main {
          */
         System.out.println(Math.sqrt(2));
         System.out.println(Math.E);
+        System.out.println(Math.round(Math.E * 100)/100.);
         System.out.println(PI);
         System.out.println(Math.pow(2, 3));
         System.out.println(sin(PI / 2)); // Argument to sine is in radians.
-        System.out.println(sin(90)); // Here the argument is 90 radians!
+        // System.out.println(sin(90)); // Here the argument is 90 radians!
 
         System.out.println(j);
         System.out.println((double) j);
@@ -140,17 +119,16 @@ public class Main {
            import static java.lang.Math.PI;
            import static java.lang.Math.sin;
            */
-        System.out.println(sin(PI / 2));
+        // System.out.println(sin(PI / 2));
 
         /* I can use the variables and methods in the
            Math library without using "Math." in front of each one
            if I
            import static java.lang.Math.*;
            */
-        System.out.println(pow(2, 3));
+        // System.out.println(pow(2, 3));
 
-        // You can't change the value if you assigned the value using final.
-        // MI_IN_ONE_KM = 12;
+        System.out.println(kmToMiles(5));
 
     }
 
@@ -177,13 +155,12 @@ public class Main {
         return (number % 2) == 1;
     }
 
-    /***
-     * kmToMiles - A method to convert km to miles
-     * @param km - distance in km
-     * @return - distance in mi
+    /**
+     * kmToMiles - A method to convert kilometers km to miles
+     * @param km - distance in kilometers
+     * @return - distance in miles
      */
-    public static double kmToMiles(double km){
-        // double mi_in_one_km = 0.621371;
+    public static double kmToMiles(double km) {
         return km * MI_IN_ONE_KM;
     }
 
